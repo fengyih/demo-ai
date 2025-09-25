@@ -1,0 +1,16 @@
+com\tcs\model\ChatRequest.class
+com\tcs\exception\BusinessException.class
+com\tcs\DemoApplication.class
+com\tcs\service\ChatServiceImpl.class
+com\tcs\repository\CharacterRepository.class
+com\tcs\controller\CharacterCategoryController.class
+com\tcs\exception\GlobalExceptionHandler.class
+com\tcs\model\Message.class
+com\tcs\controller\CharacterController.class
+com\tcs\model\ChatResponse.class
+com\tcs\controller\HealthController.class
+com\tcs\controller\ChatController.class
+com\tcs\exception\ResourceNotFoundException.class
+com\tcs\service\ChatService.class
+com\tcs\config\AppConfig.class
+com\tcs\model\Character.class

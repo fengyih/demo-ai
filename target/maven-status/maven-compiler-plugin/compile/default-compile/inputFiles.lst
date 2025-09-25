@@ -1,0 +1,16 @@
+E:\tcs\backend-java\src\main\java\com\tcs\config\AppConfig.java
+E:\tcs\backend-java\src\main\java\com\tcs\controller\CharacterCategoryController.java
+E:\tcs\backend-java\src\main\java\com\tcs\controller\CharacterController.java
+E:\tcs\backend-java\src\main\java\com\tcs\controller\ChatController.java
+E:\tcs\backend-java\src\main\java\com\tcs\controller\HealthController.java
+E:\tcs\backend-java\src\main\java\com\tcs\DemoApplication.java
+E:\tcs\backend-java\src\main\java\com\tcs\exception\BusinessException.java
+E:\tcs\backend-java\src\main\java\com\tcs\exception\GlobalExceptionHandler.java
+E:\tcs\backend-java\src\main\java\com\tcs\exception\ResourceNotFoundException.java
+E:\tcs\backend-java\src\main\java\com\tcs\model\Character.java
+E:\tcs\backend-java\src\main\java\com\tcs\model\ChatRequest.java
+E:\tcs\backend-java\src\main\java\com\tcs\model\ChatResponse.java
+E:\tcs\backend-java\src\main\java\com\tcs\model\Message.java
+E:\tcs\backend-java\src\main\java\com\tcs\repository\CharacterRepository.java
+E:\tcs\backend-java\src\main\java\com\tcs\service\ChatService.java
+E:\tcs\backend-java\src\main\java\com\tcs\service\ChatServiceImpl.java
