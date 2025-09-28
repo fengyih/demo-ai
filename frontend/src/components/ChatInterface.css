@@ -1,0 +1,279 @@
+/* 聊天界面容器 */
+.chat-interface {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* 聊天头部 */
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 1rem;
+}
+
+.character-info-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.character-avatar-small {
+  width: 40px;
+  height: 40px;
+  background-color: #4a6fa5;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.character-info-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+}
+
+.character-info-header p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* 角色描述区域 */
+.character-description-section {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.character-description-section h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.character-description-section h4 {
+  color: #333;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.character-description-section p {
+  color: #495057;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 聊天内容容器 */
+.chat-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+/* 空聊天状态 */
+.chat-empty {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}
+
+/* 消息样式 */
+.message {
+  display: flex;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 用户消息对齐到右侧 */
+.message.user {
+  justify-content: flex-end;
+}
+
+/* 角色消息对齐到左侧 */
+.message.character {
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+/* 消息内容 */
+.message-content {
+  max-width: 70%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  position: relative;
+}
+
+.message.user .message-content {
+  background-color: #4a6fa5;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.message.character .message-content {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #e9ecef;
+  border-bottom-left-radius: 4px;
+}
+
+.message-text {
+  margin: 0 0 0.25rem 0;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.message-time {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  display: block;
+}
+
+.message.user .message-time {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.message.character .message-time {
+  color: #6c757d;
+}
+
+/* 输入区域 */
+.chat-input-area {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  font-size: 1rem;
+  resize: none;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: #4a6fa5;
+  box-shadow: 0 0 0 2px rgba(74, 111, 165, 0.2);
+}
+
+.send-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.send-button:hover:not(:disabled) {
+  background-color: #3a5a8a;
+}
+
+.send-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* 打字指示器 */
+.typing-indicator {
+  display: flex;
+  gap: 3px;
+  padding: 5px 0;
+}
+
+.typing-indicator span {
+  width: 6px;
+  height: 6px;
+  background-color: #6c757d;
+  border-radius: 50%;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+}
+
+/* 错误提示 */
+.chat-interface .error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid #f5c6cb;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .message-content {
+    max-width: 85%;
+  }
+  
+  .character-info-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .chat-input-area {
+    gap: 0.25rem;
+  }
+  
+  .send-button {
+    padding: 0.75rem 1rem;
+  }
+}
